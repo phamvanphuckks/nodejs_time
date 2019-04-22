@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/pages/css/style.css" rel="stylesheet">
+    <link href="/pages/css/bootstrap-toggle.min.css" rel="stylesheet">
+    <link href="/pages/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="/pages/photos/ico.png"/>
+    <script src="/pages/scripts/jquery-3.2.1.min.js"></script>
+    <script src="/pages/scripts/Chart.min.js"></script>
+    <script src="/pages/scripts/bootstrap.min.js"></script>
+    <script src="/pages/scripts/bootstrap-toggle.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+	var country = "vietnam"
+    </script>
+    <title>Pets</title>
+</head>
+<body>
+
+<div id="content">
+    <div id="title">
+        <div class="in-title">
+            <div id="vietnam">
+                Time: &nbsp; -- : -- : --
+            </div>
+        </div>
+    </div>
+    <div id="overview">
+     <div class="half">
+             <div class="half-half">
+                <center>
+                    <div class="title-half-half">
+                        <h1>Chart: Food & Water</h1>
+                    </div>
+                    <div id="chart">
+                        <canvas id="mychart"></canvas>
+                    </div>
+                </center>
+             </div>
+	     <div class="half-half">
+                  <div class="title-half-half">
+                        <h1>Camera</h1>
+                  </div>
+                  <div id="camera">
+                        <img src="/pages/photos/icon-livestream.jpg" style="width: 40vw; height: 19vw;"/>
+                  </div>
+              </div>
+     </div>
+        <div class="half">
+            <div class="half-half-device">
+
+                <div style = "margin-top:5vw;">  
+                    <h1>Control Devices</h1>
+                </div>
+                <center>
+                    <div id="control">
+                        <div id="div-switch1" style="margin-left: 30vw; margin-top:5vw; float: left;" onclick="switch_onclick(this);">
+                           <input type="checkbox" data-toggle="toggle" data-on="FOOD-ON" data-off="FOOD-OFF" data-onstyle="success" data-offstyle="danger" data-width="10vw" data-height="7vw" id="switch1">
+                        </div>
+                        <div id="div-switch2" style="margin-left: 5vw; margin-top:5vw; float: left;" onclick="switch_onclick(this);">
+                           <input type="checkbox" data-toggle="toggle" data-on="WATER-ON" data-off="WATER-OFF" data-onstyle="success" data-offstyle="danger" data-width="10vw" data-height="7vw" id="switch2">
+                        </div>
+                        <div id="div-switch3" style="margin-left: 5vw; margin-top:5vw; float: left;" onclick="switch_onclick(this);">
+                           <input type="checkbox" data-toggle="toggle" data-on="LAMP-ON" data-off="LAMP-OFF" data-onstyle="success" data-offstyle="danger" data-width="10vw" data-height="7vw" id="switch3">
+                        </div>
+			<div id="div-switch4" style="margin-left: 30vw; margin-top:5vw; float: left;"  onclick="replacePageAlarm(this);";>
+				<button type="button" class="btn btn-primary" style="width: 120px; "id="switch4" >Alarm</button>
+			</div>
+			<div id="div-switch5" style="margin-left: 30vw; margin-top:5vw; float: left;"  onclick="replacePageWeight(this);";>
+                                <button type="button" class="btn btn-primary" style="width: 120px; "id="switch5" >Weight</button>
+                        </div>
+
+                    </div>
+                </center>
+            </div>
+    </div>
+
+        </div>
+    </div>
+</div>
+</body>
+<script language="JavaScript" src="/pages/scripts/client.js"></script>
+<script language="JavaScript">
+	function replacePageAlarm()
+        {
+          location.replace("/pages/html/alarm.html"); 
+        }
+	function replacePageWeight()
+	{
+	  location.replace("/Pages/html/weight.html");	  
+	}
+         
+</script>
+</html>

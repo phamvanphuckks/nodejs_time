@@ -1,0 +1,66 @@
+1, install git
++ git config --global user.name "user_name"
++ git config --global user.email "email_id"
++ sudo apt-get install git
+2, install nodejs
++ sudo apt-get install curl python-software-properties
++ curl -sL https://deb.nodesource.com/setup_11.x | sudo -E bash -
++ sudo apt-get install nodejs
+3, mysql
++ sudo apt-get update
++ sudo apt-get install mysql-server
++ sudo ufw allow mysql
++ systemctl start mysql
++  npm install mysql
+4, socket
++ npm install websocket
++ npm install socket.io
++ npm install --save socket.io-client
+
+
+
+
+/**/ config mysql
+
+
++CREATE USER 'Phuckks_User'@'%' IDENTIFIED BY 'Phuckks_Pass';
++GRANT ALL PRIVILEGES ON * . * TO 'Phuckks_User'@'%';
++FLUSH PRIVILEGES;
++ SELECT user, host from mysql.user;
++
+
+
+5, install pymysql
++ python3 -m pip install PyMySQL
+6, install pip
++ sudo apt-get install python-pip
+7,  pytz
++ pip install pytz
+
+8, install boostrap
++ npm install bootstrap
+
+
+mqtt sub -t 'hello' -h 'test.mosquitto.org' -v
+
+On another
+
+mqtt pub -t 'hello' -h 'test.mosquitto.org' -m 'from MQTT.js'
+
+mosquitto_sub -h localhost -t test
+
++ Ở terminal 2 bạn gõ lệnh:
+
+mosquitto_pub -h localhost -t test -m ‘hello world
+
+sudo chmod a+rw /dev/ttyUSB0
+
+
+void createMsg(char* s)
+{
+  s[0] = '\0';
+  String tmp = "{\"temp\": " + String(temp) + ",\"hum\": " + String(hum) + "}";
+  strcat(s, String(tmp).c_str());
+  Serial.println(s);
+  return;
+}

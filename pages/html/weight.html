@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/pages/css/style.css" rel="stylesheet">
+    <link href="/pages/css/bootstrap-toggle.min.css" rel="stylesheet">
+    <link href="/pages/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="/pages/photos/ico.png"/>
+    <script src="/pages/scripts/jquery-3.2.1.min.js"></script>
+    <script src="/pages/scripts/Chart.min.js"></script>
+    <script src="/pages/scripts/bootstrap.min.js"></script>
+    <script src="/pages/scripts/bootstrap-toggle.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        var country = "vietnam"
+    </script>
+    <title>Pets</title>
+</head>
+<body>
+
+<div id="content">
+   <div class="half">
+      <div class="half-half-device">
+          <div style = "margin-top:5vw;">
+                    <h1>Control Weight</h1>
+                </div>
+                <center>
+                    <div id="control">
+                        <div id="div-switch6" style="margin-left: 10vw; margin-top:5vw; float: left;"  onclick="ClickUp(this)";>
+                                <button type="button" class="btn btn-primary" style="width: 120px; "id="switch6" >UP</button>
+                        </div>
+                        <div id="div-switch7" style="margin-left: 10vw; margin-top:5vw; float: left;"  onclick="ClickDown(this)";>
+                                <button type="button" class="btn btn-primary" style="width: 120px; "id="switch7" >DOWN</button>
+                        </div>
+			<div id="div-switch8" style="margin-left: 10vw; margin-top:5vw; float: left;"  onclick="ClickBack(this)";>
+                                <button type="button" class="btn btn-primary" style="width: 120px; "id="switch8" >Back</button>
+                        </div>
+
+                    </div>
+                </center>
+                </div>
+	</div>
+      </div>
+   </div>
+</div>
+</body>
+<script>
+   $("#switch8").on('click', function(){
+        location.replace("/");
+    });
+
+	
+</script>
+</html>
+
+
+
